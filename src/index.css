@@ -1,0 +1,44 @@
+.logo1 {
+    height: 40px;
+    width:40px
+}
+
+.Head {
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.head1{
+    display: flex;
+   font-size: 20px;
+  font-weight: bold;
+  color: #4a3e3f;
+  margin-right: 20px;
+}
+
+.head2{
+    display: flex;
+    flex: 1;
+    gap: 5px;
+}
+.head2 input {
+    width: 50%;
+    padding: 6px;
+}
+.head3 {
+    font-size: large;
+    list-style: none;
+    display: flex;
+    flex: 1;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+#navlink {
+    color: black;
+    width: 10%;
+}
+
+
