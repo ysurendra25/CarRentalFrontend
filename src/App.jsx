@@ -4,6 +4,7 @@ import Home from "./Pages.jsx/Home";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import LogIn from "./Pages.jsx/LogIn";
 import Register from "./Pages.jsx/Register";
+import Profile from "./Pages.jsx/Profile";
 
 
 function App() {
@@ -12,11 +13,13 @@ function App() {
         <BrowserRouter>
 
         <Navbar />
+        
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/cars" element={<Cars/>} />
           <Route path="/login" element={<LogIn/>} />
           <Route path="/register" element={<Register/>}/>
+          <Route path="/profile" element={<Profile/>}/>
         </Routes>
         </BrowserRouter>
     );

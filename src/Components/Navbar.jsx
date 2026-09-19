@@ -1,7 +1,19 @@
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
+
+  const token = localStorage.getItem("token");
+  const navigate = useNavigate();
+
+  function handleLogOut() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("email");
+    localStorage.removeItem("role");
+
+    navigate("/LogIn");
+  }
+
     return (
         
         <nav className="Head">
@@ -16,10 +28,17 @@ function Navbar() {
           </div>
 
 
-         <div>
+         <div className="head3">
         <Link to="/">Home</Link>
         <Link to="/cars">Cars</Link>
-        <Link to="/login">Log/Reg</Link>
+        
+        {
+          token?
+          (<> <Link to="/Profile">Profile</Link>
+            <button onClick={handleLogOut}>LogOut</button> </>
+          )
+          :(<Link to="/LogIn">LogIn/Reg</Link>)
+        }
       </div>
     </nav>
     );
